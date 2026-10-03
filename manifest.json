@@ -1,0 +1,119 @@
+{
+  "manifest_version": 3,
+  "name": "Qui possède quoi ? – Propriété des médias",
+  "short_name": "Qui possède quoi ?",
+  "version": "0.1.0",
+  "description": "Affiche à côté d'une chaîne YouTube, d'un compte X ou d'un média le groupe auquel il appartient, ainsi que les intérêts économiques et sociaux de ce groupe.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Qui possède quoi ?",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://x.com/*",
+        "*://*.x.com/*",
+        "*://twitter.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "data/data.js",
+        "src/matcher.js",
+        "src/card.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.6play.fr/*",
+        "*://*.abcnews.go.com/*",
+        "*://*.afp.com/*",
+        "*://*.aljazeera.com/*",
+        "*://*.aljazeera.net/*",
+        "*://*.arretsurimages.net/*",
+        "*://*.arte.tv/*",
+        "*://*.bbc.co.uk/*",
+        "*://*.bbc.com/*",
+        "*://*.bfmtv.com/*",
+        "*://*.bloomberg.com/*",
+        "*://*.canalplus.com/*",
+        "*://*.cbsnews.com/*",
+        "*://*.cgtn.com/*",
+        "*://*.cnbc.com/*",
+        "*://*.cnews.fr/*",
+        "*://*.cnn.com/*",
+        "*://*.courrierinternational.com/*",
+        "*://*.europe1.fr/*",
+        "*://*.foxnews.com/*",
+        "*://*.franc-tireur.fr/*",
+        "*://*.france.tv/*",
+        "*://*.france24.com/*",
+        "*://*.franceinfo.fr/*",
+        "*://*.franceinter.fr/*",
+        "*://*.francetvinfo.fr/*",
+        "*://*.humanite.fr/*",
+        "*://*.lci.fr/*",
+        "*://*.lecanardenchaine.fr/*",
+        "*://*.lefigaro.fr/*",
+        "*://*.lejdd.fr/*",
+        "*://*.lemonde.fr/*",
+        "*://*.leparisien.fr/*",
+        "*://*.lepoint.fr/*",
+        "*://*.lesechos.fr/*",
+        "*://*.lobs.fr/*",
+        "*://*.m6.fr/*",
+        "*://*.marianne.net/*",
+        "*://*.mediapart.fr/*",
+        "*://*.msnbc.com/*",
+        "*://*.nbcnews.com/*",
+        "*://*.news.sky.com/*",
+        "*://*.nouvelobs.com/*",
+        "*://*.nypost.com/*",
+        "*://*.nytimes.com/*",
+        "*://*.ouest-france.fr/*",
+        "*://*.parismatch.com/*",
+        "*://*.radioclassique.fr/*",
+        "*://*.radiofrance.fr/*",
+        "*://*.reuters.com/*",
+        "*://*.rfi.fr/*",
+        "*://*.rmc.fr/*",
+        "*://*.rt.com/*",
+        "*://*.rtl.fr/*",
+        "*://*.skynews.com/*",
+        "*://*.telerama.fr/*",
+        "*://*.tf1.fr/*",
+        "*://*.tf1info.fr/*",
+        "*://*.theguardian.com/*",
+        "*://*.thesun.co.uk/*",
+        "*://*.thetimes.co.uk/*",
+        "*://*.thetimes.com/*",
+        "*://*.washingtonpost.com/*",
+        "*://*.wsj.com/*",
+        "*://*.xinhuanet.com/*"
+      ],
+      "exclude_matches": [
+        "*://*.youtube.com/*",
+        "*://*.x.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "data/data.js",
+        "src/matcher.js",
+        "src/card.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qui possède quoi ?</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><h1>Qui possède quoi&nbsp;?</h1></header>
+  <section id="current" aria-live="polite"></section>
+  <section>
+    <label for="q">Rechercher un média ou un groupe</label>
+    <input id="q" type="search" placeholder="CNews, Le Monde, Fox News…" autocomplete="off">
+    <div id="results"></div>
+  </section>
+  <section class="settings">
+    <strong>Afficher les badges sur</strong>
+    <label><input type="checkbox" id="s-youtube"> YouTube</label>
+    <label><input type="checkbox" id="s-x"> X (Twitter)</label>
+    <label><input type="checkbox" id="s-sites"> Sites de médias</label>
+  </section>
+  <script src="../data/data.js"></script>
+  <script src="../src/matcher.js"></script>
+  <script src="../src/card.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

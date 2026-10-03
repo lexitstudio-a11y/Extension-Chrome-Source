@@ -1,0 +1,10 @@
+:root { color-scheme: light dark; }
+body { width: 380px; margin: 0; padding: 12px 14px 14px; font: 13px/1.4 system-ui, sans-serif; }
+h1 { font-size: 16px; margin: 0 0 8px; }
+section { margin-bottom: 12px; }
+label { display: block; margin: 3px 0; }
+input[type="search"] { width: 100%; box-sizing: border-box; padding: 6px 8px; margin: 4px 0 6px; font: inherit; }
+.empty { color: GrayText; margin: 4px 0; }
+.result { display: block; width: 100%; text-align: left; font: inherit; padding: 6px 8px; margin: 3px 0; cursor: pointer; border: 1px solid ButtonBorder; border-radius: 8px; background: ButtonFace; color: ButtonText; }
+.result small { color: GrayText; }
+.settings { border-top: 1px solid ButtonBorder; padding-top: 8px; }
